@@ -7,10 +7,10 @@ const html = await readFile(resolve(root, "index.html"), "utf8");
 
 const requiredSnippets = [
   "<!doctype html>",
-  '<html lang="en">',
+  '<html lang="ja">',
   'src="gamepackage.png"',
-  "Watch the gameplay trailer",
-  "Disclosure: Use of Generative AI",
+  "プレイ紹介動画を見る",
+  "生成AIの利用に関する開示",
 ];
 
 for (const snippet of requiredSnippets) {
