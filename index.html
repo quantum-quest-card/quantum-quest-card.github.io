@@ -130,6 +130,14 @@
         background: rgba(5, 8, 22, 0.55);
         text-align: center;
         padding: 1rem;
+        overflow: hidden;
+      }
+
+      .placeholder img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
       }
 
       .disclosure {
@@ -208,13 +216,11 @@
         <aside class="card">
           <h2 style="margin-top: 0">Coming Soon</h2>
           <div class="placeholder" aria-label="Logo placeholder">
-            Logo placeholder<br />
-            (image will be uploaded later)
+            <img src="logo.png" alt="Quantum Quest logo" />
           </div>
           <div style="height: 0.8rem"></div>
           <div class="placeholder" aria-label="Package placeholder">
-            Package image placeholder<br />
-            (image will be uploaded later)
+            <img src="gamepackage.png" alt="Quantum Quest game package" />
           </div>
         </aside>
       </section>
