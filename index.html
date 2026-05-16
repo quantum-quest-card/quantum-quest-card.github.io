@@ -60,14 +60,6 @@
         letter-spacing: 0.04em;
       }
 
-      nav {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
       .hero {
         padding: 5rem 0 3.5rem;
         display: grid;
@@ -115,8 +107,14 @@
         padding: 1rem;
       }
 
-      .notice {
-        border-left: 4px solid var(--accent);
+      .disclosure {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .disclosure h2 {
+        color: var(--text);
+        font-size: 1.1rem;
       }
 
       section {
@@ -154,10 +152,7 @@
     <header>
       <div class="container header-inner">
         <div class="brand">Quantum Quest</div>
-        <nav>
-          <a href="#generative-ai">Generative AI Notice</a>
-          <a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">by Requid Osaka</a>
-        </nav>
+        <nav><a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">by Requid Osaka</a></nav>
       </div>
     </header>
 
@@ -217,13 +212,13 @@
         </p>
       </section>
 
-      <section id="generative-ai" class="card notice" aria-labelledby="generative-ai-heading">
-        <h2 id="generative-ai-heading">Use of Generative AI</h2>
+      <section id="generative-ai" class="disclosure" aria-labelledby="generative-ai-heading">
+        <h2 id="generative-ai-heading">Disclosure: Use of Generative AI</h2>
         <p>
           Quantum Quest uses generative AI to create some card images and visual materials. The main image-generation
-          tool used is <a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noreferrer">Adobe Firefly</a>.
-          According to Adobe, Adobe Firefly is trained on licensed content and public-domain content whose copyright has
-          expired.
+          tool used is Adobe Firefly. According to Adobe, Adobe Firefly is trained on
+          <a href="https://www.adobe.com/ai/overview/firefly/gen-ai-approach.html" target="_blank" rel="noreferrer">licensed
+          content and public-domain content whose copyright has expired</a>.
         </p>
         <p>
           The creators review generated images before use and, where necessary, select, edit, and adjust them. Care is
