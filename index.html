@@ -88,6 +88,31 @@
         background: rgba(102, 217, 255, 0.08);
       }
 
+      .hero-actions {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: rgba(102, 217, 255, 0.12);
+        color: var(--text);
+        font-weight: 700;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+      }
+
+      .button:hover,
+      .button:focus {
+        background: rgba(102, 217, 255, 0.2);
+      }
+
       .card {
         background: linear-gradient(160deg, rgba(154, 140, 255, 0.12), rgba(102, 217, 255, 0.07));
         border: 1px solid var(--border);
@@ -173,6 +198,11 @@
             Quantum Quest is designed as an experiential learning tool for discussing ELSI — ethical, legal, and social
             issues — and RRI — responsible research and innovation — in the context of quantum technology.
           </p>
+          <div class="hero-actions">
+            <a class="button" href="https://www.youtube.com/watch?v=fwVyNrLsxmw" target="_blank" rel="noreferrer">
+              Watch the gameplay trailer
+            </a>
+          </div>
         </div>
 
         <aside class="card">
