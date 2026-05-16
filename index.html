@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Quest | A Serious Card Game on Quantum Innovation</title>
+    <meta
+      name="description"
+      content="Quantum Quest is a serious card game by Requid Osaka that simulates near-future competition in quantum technology development and introduces Responsible Research and Innovation (RRI)."
+    />
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-card: #11162d;
+        --text: #ecf0ff;
+        --muted: #b8c0e6;
+        --accent: #66d9ff;
+        --accent-2: #9a8cff;
+        --border: #2b3560;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 20% 10%, #18214d 0, var(--bg) 35%), var(--bg);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .container {
+        width: min(1080px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+        background: rgba(5, 8, 22, 0.8);
+        position: sticky;
+        top: 0;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .hero {
+        padding: 5rem 0 3.5rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1.3fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 62ch;
+      }
+
+      .pill {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(102, 217, 255, 0.08);
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: rgba(102, 217, 255, 0.12);
+        color: var(--text);
+        font-weight: 700;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+      }
+
+      .button:hover,
+      .button:focus {
+        background: rgba(102, 217, 255, 0.2);
+      }
+
+      .card {
+        background: linear-gradient(160deg, rgba(154, 140, 255, 0.12), rgba(102, 217, 255, 0.07));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+
+      .placeholder {
+        aspect-ratio: 4 / 3;
+        border: 1px dashed #7f8bc1;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        color: #c4ccf5;
+        background: rgba(5, 8, 22, 0.55);
+        text-align: center;
+        padding: 1rem;
+        overflow: hidden;
+      }
+
+      .placeholder img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .disclosure {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .disclosure h2 {
+        color: var(--text);
+        font-size: 1.1rem;
+      }
+
+      section {
+        padding: 2.2rem 0;
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.4rem, 2.3vw, 2rem);
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        margin-top: 2.5rem;
+        padding: 1.2rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="brand">Quantum Quest</div>
+        <nav><a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">by Requid Osaka</a></nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <span class="pill">Serious Game · Quantum Futures · RRI</span>
+          <h1>Explore the near future of quantum technology through strategic play.</h1>
+          <p>
+            Quantum Quest is a card game designed to help participants explore the ethical, legal, and social
+            implications of quantum technologies, as well as questions of responsible research and innovation.
+          </p>
+          <p>
+            Through dice rolls, resource tokens, negotiation, mission cards, and unexpected events, players experience
+            the dynamics of technological competition, cooperation, strategic decision-making, and social uncertainty.
+          </p>
+          <p>
+            Quantum Quest is designed as an experiential learning tool for discussing ELSI — ethical, legal, and social
+            issues — and RRI — responsible research and innovation — in the context of quantum technology.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://www.youtube.com/watch?v=fwVyNrLsxmw" target="_blank" rel="noreferrer">
+              Watch the gameplay trailer
+            </a>
+          </div>
+        </div>
+
+        <aside class="card">
+          <div class="placeholder" aria-label="Logo placeholder">
+            <img src="logo.png" alt="Quantum Quest logo" />
+          </div>
+          <div style="height: 0.8rem"></div>
+          <div class="placeholder" aria-label="Package placeholder">
+            <img src="gamepackage.png" alt="Quantum Quest game package" />
+          </div>
+        </aside>
+      </section>
+
+      <section>
+        <h2>What You Can Learn</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Systems Thinking</h3>
+            <p>Understand how scientific progress, policy, markets, and society interact in quantum innovation.</p>
+          </article>
+          <article class="card">
+            <h3>RRI Basics</h3>
+            <p>Get introduced to core RRI ideas: anticipation, inclusion, reflexivity, and responsiveness.</p>
+          </article>
+          <article class="card">
+            <h3>Strategic Collaboration</h3>
+            <p>Experience trade-offs between competition and cooperation while navigating uncertain futures.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Who Is It For?</h2>
+        <p>
+          Quantum Quest is designed for students, researchers, educators, and anyone interested in the social dimensions
+          of emerging technologies. It can be used in workshops, classrooms, and public engagement events.
+        </p>
+      </section>
+
+      <section id="generative-ai" class="disclosure" aria-labelledby="generative-ai-heading">
+        <h2 id="generative-ai-heading">Disclosure: Use of Generative AI</h2>
+        <p>
+          Quantum Quest uses generative AI to create some card images and visual materials. The main image-generation
+          tool used is Adobe Firefly. According to Adobe, Adobe Firefly is trained on
+          <a href="https://www.adobe.com/ai/overview/firefly/gen-ai-approach.html" target="_blank" rel="noreferrer">licensed
+          content and public-domain content whose copyright has expired</a>.
+        </p>
+        <p>
+          The creators review generated images before use and, where necessary, select, edit, and adjust them. Care is
+          also taken not to intentionally reproduce specific real people, organizations, or existing works.
+        </p>
+        <p>
+          This game is intended to provide a space for learning and dialogue about Responsible Research and Innovation
+          (RRI) in quantum technology. In its use of generative AI, the project strives to give due consideration to
+          copyright, appropriateness of expression, and transparency.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        Quantum Quest is developed by <a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">Requid Osaka</a>.
+        <br />Read our <a href="#generative-ai">generative AI notice</a>. For updates, rules, and event information, this page will be expanded soon.
+      </div>
+    </footer>
+  </body>
+</html>
