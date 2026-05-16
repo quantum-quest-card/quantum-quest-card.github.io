@@ -1,0 +1,10 @@
+{
+  "name": "quantum-quest-card.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "screenshot": "node scripts/capture-screenshot.mjs",
+    "check:html": "node scripts/check-html.mjs"
+  }
+}
