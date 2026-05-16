@@ -1,0 +1,40 @@
+name: Capture homepage screenshot
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set up Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Capture screenshot
+        run: npm run screenshot
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+
+      - name: Upload screenshot artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-screenshot
+          path: screenshots/homepage.png
+          if-no-files-found: error
