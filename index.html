@@ -60,6 +60,13 @@
         letter-spacing: 0.04em;
       }
 
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
       .hero {
         padding: 5rem 0 3.5rem;
         display: grid;
@@ -188,7 +195,10 @@
     <header>
       <div class="container header-inner">
         <div class="brand">Quantum Quest</div>
-        <nav><a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">by Requid Osaka</a></nav>
+        <nav aria-label="Related links">
+          <a href="index-ja.html">日本語</a>
+          <a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">by Requid Osaka</a>
+        </nav>
       </div>
     </header>
 
@@ -250,29 +260,15 @@
       </section>
 
       <section id="generative-ai" class="disclosure" aria-labelledby="generative-ai-heading">
-        <h2 id="generative-ai-heading">Disclosure: Use of Generative AI</h2>
-        <p>
-          Quantum Quest uses generative AI to create some card images and visual materials. The main image-generation
-          tool used is Adobe Firefly. According to Adobe, Adobe Firefly is trained on
-          <a href="https://www.adobe.com/ai/overview/firefly/gen-ai-approach.html" target="_blank" rel="noreferrer">licensed
-          content and public-domain content whose copyright has expired</a>.
-        </p>
-        <p>
-          The creators review generated images before use and, where necessary, select, edit, and adjust them. Care is
-          also taken not to intentionally reproduce specific real people, organizations, or existing works.
-        </p>
-        <p>
-          This game is intended to provide a space for learning and dialogue about Responsible Research and Innovation
-          (RRI) in quantum technology. In its use of generative AI, the project strives to give due consideration to
-          copyright, appropriateness of expression, and transparency.
-        </p>
+        <h2 id="generative-ai-heading">Regarding the Use of Image-Generating AI</h2>
+        <p><a href="image-generating-ai.html">Regarding the Use of Image-Generating AI</a></p>
       </section>
     </main>
 
     <footer>
       <div class="container">
         Quantum Quest is developed by <a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">Requid Osaka</a>.
-        <br />Read our <a href="#generative-ai">generative AI notice</a>. For updates, rules, and event information, this page will be expanded soon.
+        <br />Read our <a href="image-generating-ai.html">note regarding the use of image-generating AI</a>. For updates, rules, and event information, this page will be expanded soon.
       </div>
     </footer>
   </body>

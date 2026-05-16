@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Quest | 量子イノベーションを体験するシリアスカードゲーム</title>
+    <meta
+      name="description"
+      content="Quantum Questは、Requid Osakaが開発する量子技術の近未来を題材にしたシリアスカードゲームです。国内の授業・研修・ワークショップで、ELSIや責任ある研究・イノベーション（RRI）を対話的に学べます。"
+    />
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-card: #11162d;
+        --text: #ecf0ff;
+        --muted: #b8c0e6;
+        --accent: #66d9ff;
+        --accent-2: #9a8cff;
+        --border: #2b3560;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 20% 10%, #18214d 0, var(--bg) 35%), var(--bg);
+        line-height: 1.75;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .container {
+        width: min(1080px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+        background: rgba(5, 8, 22, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero {
+        padding: 5rem 0 3.5rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1.3fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 62ch;
+      }
+
+      .pill {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(102, 217, 255, 0.08);
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: rgba(102, 217, 255, 0.12);
+        color: var(--text);
+        font-weight: 700;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+      }
+
+      .button:hover,
+      .button:focus {
+        background: rgba(102, 217, 255, 0.2);
+      }
+
+      .card {
+        background: linear-gradient(160deg, rgba(154, 140, 255, 0.12), rgba(102, 217, 255, 0.07));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+
+      .package-card {
+        align-self: start;
+        padding: 0.9rem;
+      }
+
+      .package-frame {
+        aspect-ratio: 3 / 4;
+        border: 1px solid rgba(127, 139, 193, 0.45);
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: rgba(5, 8, 22, 0.35);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        overflow: hidden;
+      }
+
+      .package-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .disclosure {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .disclosure h2 {
+        color: var(--text);
+        font-size: 1.1rem;
+      }
+
+      section {
+        padding: 2.2rem 0;
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.4rem, 2.3vw, 2rem);
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        margin-top: 2.5rem;
+        padding: 1.2rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <div class="brand">Quantum Quest</div>
+        <nav aria-label="関連リンク">
+          <a href="index.html">English</a>
+          <a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">Requid Osaka</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <span class="pill">シリアスゲーム · 量子技術の未来 · ELSI/RRI</span>
+          <h1>カードゲームで、量子技術がひらく近未来を考える。</h1>
+          <p>
+            Quantum Questは、量子コンピュータや量子通信などの量子技術が社会に広がる近未来を舞台に、
+            技術開発の競争・協力・意思決定を体験するためのカードゲームです。
+          </p>
+          <p>
+            サイコロ、リソーストークン、交渉、ミッションカード、そして予期せぬイベントを通じて、
+            研究開発のスピード、社会的な期待、制度づくり、リスクへの備えがどのように関係し合うのかを学びます。
+          </p>
+          <p>
+            国内の大学・高専・高校での授業、企業研修、自治体や研究機関のワークショップなどで、ELSI（倫理的・法的・社会的課題）と
+            RRI（責任ある研究・イノベーション）について対話を始める教材として活用できます。
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://www.youtube.com/watch?v=fwVyNrLsxmw" target="_blank" rel="noreferrer">
+              ゲーム紹介動画を見る
+            </a>
+          </div>
+        </div>
+
+        <aside class="card package-card">
+          <div class="package-frame" aria-label="ゲームパッケージ画像">
+            <img src="gamepackage.png" alt="Quantum Questのゲームパッケージ" />
+          </div>
+        </aside>
+      </section>
+
+      <section>
+        <h2>体験を通じて学べること</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>社会システムとしての技術</h3>
+            <p>科学技術の進展、政策、産業、生活者の価値観が、量子イノベーションの方向性に与える影響を考えます。</p>
+          </article>
+          <article class="card">
+            <h3>ELSI/RRIの基礎</h3>
+            <p>予見、包摂、再帰性、応答性といったRRIの考え方を、ゲーム中の判断や振り返りに結びつけて理解します。</p>
+          </article>
+          <article class="card">
+            <h3>協力と競争のバランス</h3>
+            <p>限られた資源をめぐる競争と、共通課題に向けた協力の両方を体験し、不確実な未来への向き合い方を探ります。</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>こんな場面におすすめです</h2>
+        <p>
+          Quantum Questは、量子技術や新興技術の社会的側面に関心のある学生、研究者、教育関係者、企業・行政の担当者、
+          市民参加型イベントの企画者に向けて設計されています。講義の導入、研究倫理・技術者倫理の演習、
+          産学官民の対話型ワークショップなど、国内の多様な学習・対話の場で利用できます。
+        </p>
+      </section>
+
+      <section>
+        <h2>進め方のイメージ</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1. 役割を選ぶ</h3>
+            <p>プレイヤーは研究機関、企業、政策担当者などの立場から、達成したいミッションを確認します。</p>
+          </article>
+          <article class="card">
+            <h3>2. 開発を進める</h3>
+            <p>資源を集め、交渉し、イベントに対応しながら、技術開発と社会的信頼の両立を目指します。</p>
+          </article>
+          <article class="card">
+            <h3>3. 振り返る</h3>
+            <p>ゲーム後の対話で、どの判断が社会にどのような影響を及ぼしたのかを参加者同士で共有します。</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Quantum Questのワークショップ実施案内</h2>
+        <p>
+          Quantum Quest を用いたワークショップの実施依頼も受け付けています。研究会、授業、企業研修、行政・政策関係者向け勉強会、
+          サイエンスコミュニケーションイベントなど、参加者の関心や目的に応じて内容を調整し、オンサイトでのファシリテーションを行うことが可能です。
+        </p>
+        <p>
+          ワークショップでは、ゲームのルール説明、プレイ進行、ゲーム後の振り返りディスカッションまでを一体的に実施します。
+          量子技術の専門知識がない方でも参加できるよう、必要に応じて量子技術やELSI/RRIに関する導入解説を組み込むこともできます。
+        </p>
+        <p>
+          実施をご希望の方は、開催目的、参加人数、対象者、希望日時、開催場所などを添えてお問い合わせください。
+        </p>
+      </section>
+
+      <section id="generative-ai" class="disclosure" aria-labelledby="generative-ai-heading">
+        <h2 id="generative-ai-heading">生成AIの利用について</h2>
+        <p><a href="image-generating-ai-ja.html">生成AIの利用について</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        Quantum Questは<a href="https://requid-osaka.github.io/" target="_blank" rel="noreferrer">Requid Osaka</a>が開発しています。
+        <br /><a href="image-generating-ai-ja.html">生成AIの利用について</a>をご確認ください。ルール、導入事例、イベント情報は順次掲載予定です。
+      </div>
+    </footer>
+  </body>
+</html>
