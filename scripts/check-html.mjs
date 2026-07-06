@@ -3,19 +3,54 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
-const html = await readFile(resolve(root, "index.html"), "utf8");
 
-const requiredSnippets = [
-  "<!doctype html>",
-  '<html lang="en">',
-  'src="gamepackage.png"',
-  "Watch the gameplay trailer",
-  "Disclosure: Use of Generative AI",
+const pages = [
+  {
+    file: "index.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="en">',
+      'src="gamepackage.png"',
+      "Watch the gameplay trailer",
+      "Use of Image-Generating AI",
+    ],
+  },
+  {
+    file: "index-ja.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="ja">',
+      '<h2 id="news-heading">ニュース</h2>',
+      '<time class="news-date" datetime="2026-07-06">2026年7月6日</time>',
+      "ハワイ大学マノア校数学科のイベント「Quantum Week in Hawaii」 でQuantum Quest英語版セッションを実施しました",
+      "news/quantum-week-in-hawaii-ja.html",
+    ],
+  },
+  {
+    file: "news/quantum-week-in-hawaii-ja.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="ja">',
+      '<time class="article-date" datetime="2026-07-06">2026年7月6日</time>',
+      "ハワイ大学マノア校数学科のイベント「Quantum Week in Hawaii」 でQuantum Quest英語版セッションを実施しました",
+      "2026年6月10日、大阪大学社会技術共創研究センターの森下・肥後は",
+      "Swarnalakshmi (Janani) Lakshmanan",
+      "学生・研究者等13名",
+      "集合写真",
+      "プレイ写真",
+      "../playimage1.JPG",
+      "../playimage2.jpg",
+    ],
+  },
 ];
 
-for (const snippet of requiredSnippets) {
-  if (!html.includes(snippet)) {
-    throw new Error(`Missing expected snippet: ${snippet}`);
+for (const { file, snippets } of pages) {
+  const html = await readFile(resolve(root, file), "utf8");
+
+  for (const snippet of snippets) {
+    if (!html.includes(snippet)) {
+      throw new Error(`${file} is missing expected snippet: ${snippet}`);
+    }
   }
 }
 
