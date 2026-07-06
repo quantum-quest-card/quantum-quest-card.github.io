@@ -33,7 +33,9 @@ const pages = [
       '<html lang="ja">',
       '<time class="article-date" datetime="2026-07-06">2026年7月6日</time>',
       "ハワイ大学マノア校数学科のイベント「Quantum Week in Hawaii」 でQuantum Quest英語版セッションを実施しました",
-      "Quantum Quest英語版を用いたセッションを実施しました",
+      "Quantum Quest英語版セッションを実施しました",
+      "../playimage1.JPG",
+      "../playimage2.jpg",
     ],
   },
 ];
