@@ -22,8 +22,18 @@ const pages = [
       '<html lang="ja">',
       '<h2 id="news-heading">ニュース</h2>',
       '<time class="news-date" datetime="2026-07-06">2026年7月6日</time>',
-      "QQ in Hawaiiニュースリリース",
-      "https://docs.google.com/document/d/1iOckvs5C3iXrbcLKVDVAjl43pjMCHtaoq4ZNzTaGKlc/edit?usp=sharing",
+      "ハワイ大学マノア校数学科のイベント「Quantum Week in Hawaii」 でQuantum Quest英語版セッションを実施しました",
+      "news/quantum-week-in-hawaii-ja.html",
+    ],
+  },
+  {
+    file: "news/quantum-week-in-hawaii-ja.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="ja">',
+      '<time class="article-date" datetime="2026-07-06">2026年7月6日</time>',
+      "ハワイ大学マノア校数学科のイベント「Quantum Week in Hawaii」 でQuantum Quest英語版セッションを実施しました",
+      "Quantum Quest英語版を用いたセッションを実施しました",
     ],
   },
 ];
