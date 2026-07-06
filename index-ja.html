@@ -203,6 +203,34 @@
         margin-top: 0.7rem;
       }
 
+      .news-list {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .news-item {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .news-date {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .news-headline {
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+
+      .news-headline a {
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+      }
+
       footer {
         border-top: 1px solid var(--border);
         margin-top: 2.5rem;
@@ -261,6 +289,24 @@
             <img src="gamepackage.png" alt="Quantum Questのゲームパッケージ" />
           </div>
         </aside>
+      </section>
+
+      <section aria-labelledby="news-heading">
+        <h2 id="news-heading">ニュース</h2>
+        <div class="news-list">
+          <article class="card news-item">
+            <time class="news-date" datetime="2026-07-06">2026年7月6日</time>
+            <div class="news-headline">
+              <a
+                href="https://docs.google.com/document/d/1iOckvs5C3iXrbcLKVDVAjl43pjMCHtaoq4ZNzTaGKlc/edit?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                QQ in Hawaiiニュースリリース
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section aria-labelledby="play-images-heading">

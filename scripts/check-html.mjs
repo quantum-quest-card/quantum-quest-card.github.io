@@ -3,19 +3,38 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
-const html = await readFile(resolve(root, "index.html"), "utf8");
 
-const requiredSnippets = [
-  "<!doctype html>",
-  '<html lang="en">',
-  'src="gamepackage.png"',
-  "Watch the gameplay trailer",
-  "Disclosure: Use of Generative AI",
+const pages = [
+  {
+    file: "index.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="en">',
+      'src="gamepackage.png"',
+      "Watch the gameplay trailer",
+      "Use of Image-Generating AI",
+    ],
+  },
+  {
+    file: "index-ja.html",
+    snippets: [
+      "<!doctype html>",
+      '<html lang="ja">',
+      '<h2 id="news-heading">ニュース</h2>',
+      '<time class="news-date" datetime="2026-07-06">2026年7月6日</time>',
+      "QQ in Hawaiiニュースリリース",
+      "https://docs.google.com/document/d/1iOckvs5C3iXrbcLKVDVAjl43pjMCHtaoq4ZNzTaGKlc/edit?usp=sharing",
+    ],
+  },
 ];
 
-for (const snippet of requiredSnippets) {
-  if (!html.includes(snippet)) {
-    throw new Error(`Missing expected snippet: ${snippet}`);
+for (const { file, snippets } of pages) {
+  const html = await readFile(resolve(root, file), "utf8");
+
+  for (const snippet of snippets) {
+    if (!html.includes(snippet)) {
+      throw new Error(`${file} is missing expected snippet: ${snippet}`);
+    }
   }
 }
 
