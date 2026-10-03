@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quantum-quest-card.github.io/sitemap.xml
